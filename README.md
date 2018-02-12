@@ -112,10 +112,10 @@ kubectl create configmap fluentd-conf --from-literal=AWS_S3_BUCKET_NAME=kubernet
     --from-file=fluent_s3.conf -n kube-system
 
 kubectl create -f fluentd_s3.yaml
---view the logs
+--view the logs --
 aws s3api list-objects --bucket nameofthebucketforlogs
  
-—- delete cluster
+—- delete cluster  --
 kops delete cluster --name myfirstcluster.k8s.local --state s3://kubernetes-aws-dakshin --yes
 
 
